@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tetris Allianz</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>TETRIS ALLIANZ</h1>
+            <div class="logo">ALLIANZ</div>
+        </div>
+        
+        <div class="game-container">
+            <div class="game-info">
+                <div class="info-box">
+                    <h3>PUNTUACIÓN</h3>
+                    <div id="score" class="score">0</div>
+                </div>
+                <div class="info-box">
+                    <h3>NIVEL</h3>
+                    <div id="level" class="level">1</div>
+                </div>
+                <div class="info-box">
+                    <h3>LÍNEAS</h3>
+                    <div id="lines" class="lines">0</div>
+                </div>
+                <div class="info-box next-piece-box">
+                    <h3>SIGUIENTE</h3>
+                    <canvas id="next-canvas" width="120" height="120"></canvas>
+                </div>
+            </div>
+            
+            <div class="game-board">
+                <canvas id="game-canvas" width="300" height="600"></canvas>
+                <div id="game-over" class="game-over hidden">
+                    <h2>JUEGO TERMINADO</h2>
+                    <p>Puntuación: <span id="final-score">0</span></p>
+                    <button id="restart-btn" class="btn">REINICIAR</button>
+                </div>
+            </div>
+        </div>
+        
+        <div class="controls">
+            <h3>CONTROLES</h3>
+            <div class="control-grid">
+                <div class="control-item">
+                    <span class="key">←</span>
+                    <span>Mover izquierda</span>
+                </div>
+                <div class="control-item">
+                    <span class="key">→</span>
+                    <span>Mover derecha</span>
+                </div>
+                <div class="control-item">
+                    <span class="key">↓</span>
+                    <span>Caída rápida</span>
+                </div>
+                <div class="control-item">
+                    <span class="key">↑</span>
+                    <span>Rotar</span>
+                </div>
+                <div class="control-item">
+                    <span class="key">ESPACIO</span>
+                    <span>Caída instantánea</span>
+                </div>
+                <div class="control-item">
+                    <span class="key">P</span>
+                    <span>Pausa</span>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <script src="tetris.js"></script>
+</body>
+</html>
